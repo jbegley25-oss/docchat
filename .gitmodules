@@ -1,0 +1,9 @@
+[submodule "test_projects/ebay-scraper"]
+	path = test_projects/ebay-scraper
+	url = https://github.com/jbegley25-oss/ebay-scraper
+[submodule "test_projects/webpage"]
+	path = test_projects/webpage
+	url = https://github.com/jbegley25-oss/jbegley25-oss.github.io
+[submodule "test_projects/markdown-compiler"]
+	path = test_projects/markdown-compiler
+	url = https://github.com/jbegley25-oss/markdown-compiler
