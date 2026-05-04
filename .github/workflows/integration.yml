@@ -11,6 +11,11 @@ jobs:
       - name: Install package
         run: pip install .
 
+      - name: Configure git
+        run: |
+          git config user.email "test@example.com"
+          git config user.name "Test"
+
       - name: Test single-message CLI
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}

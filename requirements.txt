@@ -1,5 +1,9 @@
 groq
+openai
 python-dotenv
 pytest
 coverage
 flake8
+sounddevice
+soundfile
+numpy

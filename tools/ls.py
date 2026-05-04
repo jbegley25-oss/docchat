@@ -27,7 +27,7 @@ def ls(path='.'):
     Return a sorted, newline-separated list of entries in a directory.
 
     >>> ls('test_data')
-    'binary.bin\\nhello.txt\\nnumbers.txt'
+    'binary.bin\\nhello.txt\\nnumbers.txt\\ntest.png'
     >>> ls('.')  # doctest: +ELLIPSIS
     '...'
     >>> ls('/etc')
