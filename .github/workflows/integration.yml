@@ -23,7 +23,7 @@ jobs:
           chat 'say hello'
 
       - name: Wait for rate limit reset
-        run: sleep 15
+        run: sleep 65
 
       - name: Test debug flag shows tool calls
         env:
@@ -34,7 +34,7 @@ jobs:
           echo "$output" | grep -q '\[tool\]'
 
       - name: Wait for rate limit reset
-        run: sleep 15
+        run: sleep 65
 
       - name: Test file reading via CLI
         env:
