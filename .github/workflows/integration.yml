@@ -22,6 +22,9 @@ jobs:
         run: |
           chat 'say hello'
 
+      - name: Wait for rate limit reset
+        run: sleep 15
+
       - name: Test debug flag shows tool calls
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
@@ -29,6 +32,9 @@ jobs:
           output=$(chat --debug 'please use the ls tool to list files in the current directory')
           echo "$output"
           echo "$output" | grep -q '\[tool\]'
+
+      - name: Wait for rate limit reset
+        run: sleep 15
 
       - name: Test file reading via CLI
         env:

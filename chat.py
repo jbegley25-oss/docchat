@@ -228,19 +228,12 @@ class Chat:
     if present. Supports TTS output, STT input, tab completion, multiple AI
     providers, and the Ralph Wiggum loop (auto-retry until doctests pass).
 
-    >>> import os, tempfile, subprocess
-    >>> cwd = os.getcwd()
-    >>> tmp = tempfile.mkdtemp()
-    >>> os.chdir(tmp)
-    >>> subprocess.run(['git', 'init'], capture_output=True)
-    CompletedProcess(...)
-    >>> chat = Chat()
+    >>> chat = Chat(require_git=False)
     >>> isinstance(chat.send_message('say the word: hello', temperature=0.0), str)
     True
-    >>> os.chdir(cwd)
-    >>> Chat(debug=True).debug
+    >>> Chat(debug=True, require_git=False).debug
     True
-    >>> Chat(provider='openai').provider
+    >>> Chat(provider='openai', require_git=False).provider
     'openai'
     """
 
